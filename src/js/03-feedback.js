@@ -34,7 +34,7 @@ function onFormInput(event) {
     localStorage.setItem(storageKey, JSON.stringify(saveData));
 };
 function inItForm() {
-    let saveData = localStorage.removeItem(storageKey);
+        let saveData = localStorage.getItem(storageKey);
     if (saveData) {
         saveData = JSON.parse(saveData)
         Object.entries(saveData).forEach(([name, value]) => {

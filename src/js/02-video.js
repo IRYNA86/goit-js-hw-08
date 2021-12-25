@@ -14,8 +14,10 @@ player.on('play', throttle(function () {
     }) ,1000);
 
 const toStart = JSON.parse(localStorage.getItem('current-time'));
-console.log(toStart);
-player.setCurrentTime(toStart);
+// console.log(toStart);
+if (toStart) {
+    player.setCurrentTime(toStart)
+};
 
 function onVideoStart(toStart) {
     console.log(toStart);
